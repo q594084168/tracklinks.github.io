@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn what UTM parameters are, how they work, and why every marketer needs them for campaign attribution.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="What is UTM Tracking? Complete Guide | TrackLinks">
+    <meta property="og:description" content="Learn what UTM parameters are, how they work, and why every marketer needs them for campaign attribution.">
+    <meta property="og:url" content="https://tracklinks.net/what-is-utm/">
+    <link rel="canonical" href="https://tracklinks.net/what-is-utm/">
+    <title>What is UTM Tracking? Complete Guide | TrackLinks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#0D1117;--card:#111827;--border:#1F2937;--text:#E6EDF3;--muted:#9CA3AF;--primary:#6366F1;--primary-hover:#4F46E5;--radius:12px}
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;z-index:100}
+        .logo{font-weight:700;color:var(--primary);font-size:1.1rem;text-decoration:none}
+        .nav-links{display:flex;gap:20px;align-items:center}
+        .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500}
+        .nav-links a:hover{color:#fff}
+        .container{display:flex;min-height:calc(100vh - 60px)}
+        .sidebar{width:280px;border-right:1px solid var(--border);padding:24px 20px;flex-shrink:0;overflow-y:auto}
+        .sidebar h3{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:16px}
+        .side-item{display:block;padding:10px 14px;margin-bottom:6px;border:1px solid var(--border);border-radius:8px;cursor:pointer;background:var(--card);color:var(--text);text-decoration:none;font-size:0.9rem;transition:all .15s}
+        .side-item:hover,.side-item.active{border-color:var(--primary);background:#1E1B4B}
+        .main{flex:1;padding:32px 40px}
+        .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;max-width:720px}
+        input,select{width:100%;padding:12px 14px;margin-bottom:12px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-family:inherit;font-size:0.95rem}
+        input:focus,select:focus{outline:none;border-color:var(--primary)}
+        .btn{background:var(--primary);color:#fff;padding:12px 24px;border:none;border-radius:10px;cursor:pointer;font-size:1rem;font-weight:600;font-family:inherit;width:100%}
+        .btn:hover{background:var(--primary-hover)}
+        .output{margin-top:16px;padding:14px;border-radius:10px;background:var(--bg);border:1px solid var(--border);word-break:break-all;color:#A5B4FC;font-family:monospace;font-size:0.9rem;min-height:44px}
+        h1{font-size:1.75rem;margin-bottom:8px}
+        .sub{color:var(--muted);font-size:0.95rem;margin-bottom:24px}
+        .content-section{max-width:720px;margin-top:40px}
+        .content-section h2{font-size:1.2rem;margin:24px 0 10px;color:var(--text)}
+        .content-section p{color:var(--muted);margin-bottom:12px;font-size:0.95rem;line-height:1.7}
+        .cross-link{margin-top:40px;padding:20px;background:#1E1B4B;border:1px solid var(--primary);border-radius:12px;max-width:720px}
+        .cross-link strong{color:#A5B4FC}
+        .cross-link a{color:#C7D2FE;font-weight:500}
+        .breadcrumb{font-size:0.85rem;color:var(--muted);margin-bottom:24px}
+        .breadcrumb a{color:var(--primary);text-decoration:none}
+        footer{background:var(--card);border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:0.85rem;margin-top:40px}
+        footer a{color:var(--primary);text-decoration:none}
+        @media(max-width:768px){.container{flex-direction:column}.sidebar{width:100%;border-right:none;border-bottom:1px solid var(--border)}.main{padding:20px}}
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"What is UTM Tracking? Complete Guide","url":"https://tracklinks.net/what-is-utm/","description":"Learn what UTM parameters are, how they work, and why every marketer needs them for campaign attribution.","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Campaign URL Builder?","acceptedAnswer":{"@type":"Answer","text":"A tool that creates trackable marketing links by adding UTM parameters so you can measure campaign performance in Google Analytics."}},{"@type":"Question","name":"Is TrackLinks free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No sign-up required."}},{"@type":"Question","name":"What platforms does TrackLinks support?","acceptedAnswer":{"@type":"Answer","text":"Google Ads, Facebook Ads, TikTok, Instagram, Email, and any platform using UTM parameters."}}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tracklinks.net/"},{"@type":"ListItem","position":2,"name":"What is UTM Tracking? Complete Guide","item":"https://tracklinks.net/what-is-utm/"}]}
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">TrackLinks</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#builder">Builder</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Platforms</h3>
+            <a href="/utm/google-ads/" class="side-item">Google Ads</a><a href="/utm/facebook-ads/" class="side-item">Facebook Ads</a><a href="/utm/tiktok-ads/" class="side-item">TikTok Ads</a><a href="/utm/instagram-ads/" class="side-item">Instagram Ads</a><a href="/utm/linkedin-ads/" class="side-item">LinkedIn Ads</a><a href="/utm/twitter-ads/" class="side-item">Twitter/X Ads</a><a href="/utm/pinterest-ads/" class="side-item">Pinterest Ads</a><a href="/utm/youtube-ads/" class="side-item">YouTube Ads</a><a href="/utm/snapchat-ads/" class="side-item">Snapchat Ads</a><a href="/utm/email-campaign/" class="side-item">Email Campaigns</a><a href="/utm/affiliate/" class="side-item">Affiliate Links</a><a href="/utm/sms-marketing/" class="side-item">SMS Marketing</a>
+        </div>
+        <div class="main">
+            <div class="breadcrumb"><a href="/">Home</a> / What is UTM Tracking? Complete Guide</div>
+            <h1>What is UTM Tracking? Complete Guide</h1>
+            <p class="sub">Learn what UTM parameters are, how they work, and why every marketer needs them for campaign attribution.</p>
+            <div class="card" id="builder">
+                <input id="url" placeholder="Landing page URL (e.g. https://example.com)" value="">
+                <input id="source" placeholder="utm_source (e.g. google, facebook)" value="">
+                <input id="medium" placeholder="utm_medium (e.g. cpc, email, social)" value="">
+                <input id="campaign" placeholder="utm_campaign (campaign name)" value="">
+                <input id="term" placeholder="utm_term (optional, for paid keywords)">
+                <input id="content" placeholder="utm_content (optional, for A/B testing)">
+                <button class="btn" onclick="generate()">Generate Tracking Link</button>
+                <div class="output" id="output">Your tracking URL will appear here...</div>
+                <button class="btn" style="margin-top:8px;background:var(--card);color:var(--text);border:1px solid var(--border)" onclick="copyLink()">Copy Link</button>
+            </div>
+            <div class="content-section">
+                <h2>What is TrackLinks?</h2>
+                <p>TrackLinks is a free campaign URL builder that helps you create trackable marketing links with UTM parameters. Build links for Google Ads, Facebook Ads, TikTok campaigns, email marketing, and more — then measure performance in Google Analytics. Build your campaign links with TrackLinks for precise attribution tracking.</p>
+                <h2>How It Works</h2>
+                <p>Step 1: Enter your landing page URL. Step 2: Add your traffic source (e.g. google, facebook). Step 3: Choose your medium (cpc, email, social). Step 4: Name your campaign. Step 5: Copy and use the generated tracking link.</p>
+                <h2>Common Use Cases</h2>
+                <p>TrackLinks is used by marketers and advertisers for Google Ads tracking, Facebook campaign attribution, TikTok ad measurement, email campaign tracking, affiliate link management, and social media traffic analysis.</p>
+                <h2>About This Tool</h2>
+                <p>Learn what UTM parameters are, how they work, and why every marketer needs them for campaign attribution. Use TrackLinks to build campaign URLs with UTM parameters for precise marketing attribution.</p>
+            </div>
+            <div class="cross-link">
+                <strong>Pro Tip</strong> — Need to compress images for your campaigns? Try <a href="https://compressnow.net">CompressNow</a>. Resizing ad creatives? Use <a href="https://resizenow.net">ResizeNow</a>. Writing ad copy? <a href="https://messagegen-ai.com">MessageGen-AI</a> helps with email drafts.
+            </div>
+            <div class="content-section" id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Q: What are UTM parameters?</strong><br>A: UTM parameters are tags added to URLs that allow Google Analytics to track where your traffic comes from, which medium was used, and which campaign drove the visit.</p>
+                <p><strong>Q: Is TrackLinks free?</strong><br>A: Yes, completely free with no sign-up required. Build unlimited campaign URLs.</p>
+                <p><strong>Q: Can I use TrackLinks for Facebook Ads?</strong><br>A: Yes — just select Facebook Ads preset and TrackLinks fills the right UTM values.</p>
+                <p><strong>Q: How do I see the tracking data?</strong><br>A: After using your TrackLinks-generated URL in campaigns, check Google Analytics under Acquisition > Campaigns.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>TrackLinks — Free Campaign URL Builder. Build tracking links for Google Ads, Facebook, TikTok, email and more.</p>
+        <p style="margin-top:8px"><a href="/">Home</a> · <a href="https://compressnow.net">CompressNow</a> · <a href="https://resizenow.net">ResizeNow</a> · <a href="https://tonemodifier.com">ToneModifier</a></p>
+    </footer>
+    <script>
+function generate(){
+    var url=document.getElementById('url').value;
+    var source=document.getElementById('source').value;
+    var medium=document.getElementById('medium').value;
+    var campaign=document.getElementById('campaign').value;
+    var term=document.getElementById('term').value;
+    var content=document.getElementById('content').value;
+    var params=[];
+    if(source)params.push('utm_source='+encodeURIComponent(source));
+    if(medium)params.push('utm_medium='+encodeURIComponent(medium));
+    if(campaign)params.push('utm_campaign='+encodeURIComponent(campaign));
+    if(term)params.push('utm_term='+encodeURIComponent(term));
+    if(content)params.push('utm_content='+encodeURIComponent(content));
+    var result=url+(url.includes('?')?'&':'?')+params.join('&');
+    document.getElementById('output').innerText=result;
+}
+function copyLink(){
+    var t=document.getElementById('output').innerText;
+    navigator.clipboard.writeText(t);
+    alert('Copied!');
+}
+    </script>
+</body>
+</html>
