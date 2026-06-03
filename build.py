@@ -98,11 +98,11 @@ def build_page(s):
             <p class="sub">{desc}</p>
             <div class="card" id="builder">
                 <input id="url" placeholder="Landing page URL (e.g. https://example.com)" value="{preset.get('url','')}">
-                <input id="source" placeholder="utm_source (e.g. google, facebook)" value="{preset.get('source','')}">
-                <input id="medium" placeholder="utm_medium (e.g. cpc, email, social)" value="{preset.get('medium','')}">
-                <input id="campaign" placeholder="utm_campaign (campaign name)" value="{preset.get('campaign','')}">
-                <input id="term" placeholder="utm_term (optional, for paid keywords)">
-                <input id="content" placeholder="utm_content (optional, for A/B testing)">
+                <input id="source" placeholder="Traffic source (e.g. google, facebook, tiktok)" value="{preset.get('source','')}">
+                <input id="medium" placeholder="Traffic medium (e.g. cpc, email, social)" value="{preset.get('medium','')}">
+                <input id="campaign" placeholder="Campaign name (e.g. spring-sale, product-launch)" value="{preset.get('campaign','')}">
+                <input id="term" placeholder="Keywords (optional, for paid search)">
+                <input id="content" placeholder="Ad variation (optional, for A/B testing)">
                 <button class="btn" onclick="generate()">Generate Tracking Link</button>
                 <div class="output" id="output">Your tracking URL will appear here...</div>
                 <button class="btn" style="margin-top:8px;background:var(--card);color:var(--text);border:1px solid var(--border)" onclick="copyLink()">Copy Link</button>
