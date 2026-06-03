@@ -103,9 +103,12 @@ def build_page(s):
                 <input id="campaign" placeholder="Campaign name (e.g. spring-sale, product-launch)" value="{preset.get('campaign','')}">
                 <input id="term" placeholder="Keywords (optional, for paid search)">
                 <input id="content" placeholder="Ad variation (optional, for A/B testing)">
-                <button class="btn" onclick="generate()">Generate Tracking Link</button>
+                <button class="btn" onclick="generate()">🚀 Generate Tracking URL</button>
                 <div class="output" id="output">Your tracking URL will appear here...</div>
-                <button class="btn" style="margin-top:8px;background:var(--card);color:var(--text);border:1px solid var(--border)" onclick="copyLink()">Copy Link</button>
+                <div class="btn-row" style="display:flex;gap:8px">
+                    <button class="btn" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--border)" onclick="copyLink()">📋 Copy</button>
+                    <button class="btn" style="flex:1;background:var(--card);color:var(--text);border:1px solid var(--border)" onclick="openLink()">🔗 Open</button>
+                </div>
             </div>
             <div class="content-section">
                 <h2>What is TrackLinks?</h2>
@@ -152,8 +155,18 @@ function generate(){{
 }}
 function copyLink(){{
     var t=document.getElementById('output').innerText;
-    navigator.clipboard.writeText(t);
-    alert('Copied!');
+    navigator.clipboard.writeText(t).then(function(){{document.getElementById('output').style.borderColor='#22C55E';setTimeout(function(){{document.getElementById('output').style.borderColor='#1F2937';}},1500);}});
+}}
+function openLink(){{
+    var t=document.getElementById('output').innerText;
+    if(t.startsWith('http'))window.open(t,'_blank');
+}}
+function setPreset(type){{
+    if(type=='google'){{document.getElementById('source').value='google';document.getElementById('medium').value='cpc';}}
+    if(type=='facebook'){{document.getElementById('source').value='facebook';document.getElementById('medium').value='cpc';}}
+    if(type=='tiktok'){{document.getElementById('source').value='tiktok';document.getElementById('medium').value='cpc';}}
+    if(type=='email'){{document.getElementById('source').value='newsletter';document.getElementById('medium').value='email';}}
+    if(type=='affiliate'){{document.getElementById('source').value='affiliate';document.getElementById('medium').value='referral';}}
 }}
     </script>
 </body>
