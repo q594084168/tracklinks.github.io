@@ -306,7 +306,16 @@ def build_static():
     w("404.html", "<h1>404</h1><p>Page not found. <a href='/'>Back to TrackLinks</a></p>")
 
 # ═══ Main ═══════════════════════════════════════════
+def validate_scenarios(data, name="数据"):
+    required = ['slug', 'title', 'desc']
+    for i, s in enumerate(data):
+        for f in required:
+            if f not in s:
+                raise KeyError(f"{name}[{i}] 缺字段 '{f}' — 标题: {s.get('title', 'N/A')}")
+    print(f"✅ {name}校验通过: {len(data)} 条")
+
 if __name__ == "__main__":
+    validate_scenarios(ALL_SCENARIOS, "ALL_SCENARIOS")
     build_home()
     print("")
     print(f"📄 {len(ALL_SCENARIOS)} Scenario Pages:")
