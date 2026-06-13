@@ -2,32 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tracklinks.net/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://tracklinks.net/404.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/affiliate-link-tracker.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/bulk-campaign-url-builder.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/bulk-short-link-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/bulk-utm-builder.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/bulk-utm-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/campaign-performance-dashboard.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/campaign-tracking-template.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/contact.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/cross-channel-comparison.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/csv-utm-import.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/email-link-tracker.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/facebook-pixel-utm.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/ga4-utm-integration.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/how-to-track-campaigns.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/link-in-bio-builder.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/privacy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/qr-code-click-tracker.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/qr-code-utm-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/short-link-click-tracker.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/short-link-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/short-url-utm-tracking.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/social-media-link-tracker.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/terms.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/track-utm-google-analytics.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/url-shortener-with-tracking.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/url-shortener-with-utm.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-activecampaign.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-analytics-tool.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-attribution-model.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-best-practices.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-click-dashboard.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-convertkit.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-dark-social.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-for-beginners.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-for-shopify.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-for-woocommerce.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-hubspot.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-link-manager.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-mailchimp.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-multi-touch.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-naming-convention-guide.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-naming-convention.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-parameter-cheatsheet.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-parameters-explained.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-report-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-roi-tracking.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-salesforce.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-shopify.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-spreadsheet-template.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-tag-manager.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tracklinks.net/utm-tracking-setup-guide.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-validator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-vs-auto-tagging.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://tracklinks.net/utm-vs-fbclid.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

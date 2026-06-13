@@ -257,6 +257,36 @@ PLATFORMS = [
     {"slug":"utm-attribution-model","title":"UTM Attribution Model — First vs Last Click","desc":"Understand how UTM parameters work with different marketing attribution models.","cat":"guide"},
     {"slug":"utm-multi-touch","title":"Multi-Touch Attribution with UTM Parameters","desc":"Build a multi-touch attribution system using UTM parameters across channels.","cat":"guide"},
     {"slug":"utm-roi-tracking","title":"UTM ROI Tracking — Calculate Campaign Return","desc":"Use UTM data to calculate ROI and ROAS for each marketing campaign.","cat":"guide"},
+    # === Short Link Tools ===
+    {"slug":"short-link-generator","title":"Short Link Generator with UTM — Track Clicks for Free","desc":"Create short links with UTM parameters. Track clicks without URL shorteners.","cat":"tool"},
+    {"slug":"url-shortener-with-utm","title":"URL Shortener with Click Tracking — See Who Clicks","desc":"Shorten URLs and track every click. Country, device, and referrer data included.","cat":"tool"},
+    {"slug":"short-link-click-tracker","title":"Short Link Click Tracker — Real-Time Analytics","desc":"Track every click on your short links. See which campaigns drive the most traffic.","cat":"tool"},
+    {"slug":"qr-code-utm-generator","title":"QR Code Generator with UTM — Track Offline Campaigns","desc":"Generate QR codes with embedded UTM parameters for print, billboards, and events.","cat":"tool"},
+    {"slug":"qr-code-click-tracker","title":"QR Code Click Tracker — Measure Offline ROI","desc":"Track QR code scans with UTM. See how many people scanned and from where.","cat":"tool"},
+    # === Bulk & Batch Tools ===
+    {"slug":"bulk-utm-builder","title":"Bulk UTM Builder — Generate 100+ Campaign URLs at Once","desc":"Batch create UTM-tagged URLs for multiple platforms and campaigns simultaneously.","cat":"tool"},
+    {"slug":"bulk-short-link-generator","title":"Bulk Short Link Generator — 100 Links in One Click","desc":"Generate hundreds of branded short links with UTM tracking. Export as CSV.","cat":"tool"},
+    {"slug":"csv-utm-import","title":"CSV UTM Import — Spreadsheet to Tagged URLs","desc":"Import campaign data from CSV or Excel. Auto-generate UTM URLs for every row.","cat":"tool"},
+    # === Analytics & Insights ===
+    {"slug":"utm-click-dashboard","title":"UTM Click Dashboard — Real-Time Campaign Analytics","desc":"Live dashboard showing clicks, sources, and conversions from all your UTM links.","cat":"tool"},
+    {"slug":"utm-analytics-tool","title":"UTM Analytics Tool — Which Campaigns Actually Convert","desc":"Analyze UTM-tagged traffic. Compare channels, campaigns, and content performance.","cat":"tool"},
+    {"slug":"campaign-performance-dashboard","title":"Campaign Performance Dashboard — Compare All Channels","desc":"Side-by-side comparison of Google Ads, Facebook, TikTok, and email campaign ROI.","cat":"tool"},
+    {"slug":"utm-report-generator","title":"UTM Report Generator — Auto-Create Campaign Reports","desc":"Generate PDF reports from UTM data. Share campaign performance with clients.","cat":"tool"},
+    {"slug":"utm-link-manager","title":"Link Manager — Organize and Search Campaign URLs","desc":"Manage all your UTM links in one place. Tag, search, and filter by campaign.","cat":"tool"},
+    # === Niche Tools ===
+    {"slug":"link-in-bio-builder","title":"Link in Bio Builder with UTM — Track Social Traffic","desc":"Build link-in-bio pages with UTM tracking. See which social posts drive traffic.","cat":"tool"},
+    {"slug":"affiliate-link-tracker","title":"Affiliate Link Tracker — Monitor Clicks and Conversions","desc":"Track affiliate link clicks with UTM. See which partners perform best.","cat":"tool"},
+    {"slug":"email-link-tracker","title":"Email Link Tracker — Track Campaign Click-Through","desc":"Add UTM to email links. Track exactly which subscribers clicked which links.","cat":"tool"},
+    {"slug":"social-media-link-tracker","title":"Social Media Link Tracker — Posts That Drive Traffic","desc":"Track clicks from Instagram, TikTok, Twitter, and Facebook posts with UTM.","cat":"tool"},
+    {"slug":"cross-channel-comparison","title":"Cross-Channel Comparison — Find Your Best Channel","desc":"Compare UTM performance across Google, Facebook, TikTok, and email side by side.","cat":"tool"},
+    {"slug":"utm-for-shopify","title":"UTM for Shopify — Track Store Traffic by Campaign","desc":"Add UTM tracking to Shopify product links. See which ads bring sales.","cat":"tool"},
+    {"slug":"utm-for-woocommerce","title":"UTM for WooCommerce — Track WordPress Store Traffic","desc":"UTM link generator for WooCommerce. Track campaigns driving traffic to your store.","cat":"tool"},
+    # === Guides & Resources ===
+    {"slug":"utm-parameter-cheatsheet","title":"UTM Parameter Cheatsheet — Quick Reference (2026)","desc":"Free UTM parameter reference with examples. utm_source, medium, campaign explained.","cat":"guide"},
+    {"slug":"utm-tracking-setup-guide","title":"UTM Tracking Setup Guide — From Zero to Full Analytics","desc":"Step-by-step guide to set up UTM tracking for all your marketing channels.","cat":"guide"},
+    {"slug":"utm-for-beginners","title":"UTM for Beginners — Start Tracking in 5 Minutes","desc":"Complete beginner guide to UTM parameters. No technical skills needed.","cat":"guide"},
+    {"slug":"ga4-utm-integration","title":"Google Analytics UTM Guide — Connect to GA4","desc":"How to see UTM campaign data in Google Analytics 4. Step-by-step tutorial.","cat":"guide"},
+    {"slug":"utm-naming-convention-guide","title":"UTM Naming Convention Guide — Best Practices for Teams","desc":"Standardize your UTM naming across teams. Free template and examples.","cat":"guide"},
 ]
 
 ALL_SCENARIOS = PLATFORMS
