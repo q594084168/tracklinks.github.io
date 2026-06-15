@@ -13,12 +13,69 @@ def w(path, content):
     with open(full, "w", encoding="utf-8") as f:
         f.write(content)
 
+def make_content(s):
+    """Generate page-specific content blocks to avoid duplicate content across pages."""
+    title = s["title"]
+    desc = s["desc"]
+    slug = s.get("slug", "")
+    cat = s.get("cat", "platform")
+    preset = s.get("preset", {})
+    platform_name = preset.get("source", "your campaigns")
+    medium_name = preset.get("medium", "cpc")
+    display_name = platform_name.replace("-"," ").title() if platform_name != "your campaigns" else "all your campaigns"
+    # Fix common platform name casing
+    _casing_fixes = {"Tiktok":"TikTok","Linkedin":"LinkedIn","Youtube":"YouTube","Snapchat":"Snapchat","Instagram":"Instagram","Facebook":"Facebook","Twitter":"Twitter","Pinterest":"Pinterest","Reddit":"Reddit","Google":"Google"}
+    display_name = _casing_fixes.get(display_name, display_name)
+    
+    # Homepage gets its own intro content
+    if slug == "":
+        what_is = '<h2>What is TrackLinks?</h2>\n                <p>TrackLinks is a <strong>free campaign URL builder</strong> that helps marketers create trackable links with UTM parameters. Build links for Google Ads, Facebook Ads, TikTok campaigns, email marketing, and more — then measure performance in Google Analytics. No sign-up, no limits, no watermark.</p>'
+        how_it_works = '<h2>How It Works</h2>\n                <p><strong>Step 1:</strong> Paste your landing page URL. <strong>Step 2:</strong> Select your traffic source (Google, Facebook, TikTok, etc.). <strong>Step 3:</strong> Choose your medium (CPC, email, social). <strong>Step 4:</strong> Name your campaign. <strong>Step 5:</strong> Copy the tracking link and use it in your ads. That\'s it — your campaign data flows into Google Analytics automatically.</p>'
+        use_cases = '<h2>Common Use Cases</h2>\n                <p>TrackLinks is used by digital marketers and advertisers for <strong>Google Ads tracking</strong>, Facebook campaign attribution, TikTok ad measurement, email campaign click tracking, affiliate link management, and social media traffic analysis. Built for anyone who needs clean, consistent UTM parameters without spreadsheets.</p>'
+        faq_items = [
+            {"q": "What are UTM parameters?", "a": "UTM parameters are tags added to URLs that tell Google Analytics exactly where your traffic comes from — which source, medium, and campaign drove each visit. They are the foundation of marketing attribution."},
+            {"q": "Is TrackLinks really free?", "a": "Yes — 100% free with no sign-up, no limits, and no watermark. We built TrackLinks to be the simplest UTM builder on the web. Generate unlimited tracking URLs for all your campaigns."},
+            {"q": "Which platforms does TrackLinks support?", "a": "Google Ads, Facebook Ads, TikTok, Instagram, LinkedIn, Twitter/X, Pinterest, YouTube, Snapchat, Email (Mailchimp, HubSpot, ConvertKit), SMS, QR codes, affiliate links, and any platform that accepts UTM parameters."},
+        ]
+    elif cat == "platform":
+        what_is = f'<h2>What is the {title}?</h2>\n                <p>{desc} Pre-filled with utm_source={platform_name} and utm_medium={medium_name}, this builder lets you create clean tracking links in seconds — no copy-paste errors, no broken conventions.</p>'
+        how_it_works = f'<h2>How to Use the {title}</h2>\n                <p><strong>Step 1:</strong> Paste your landing page URL. <strong>Step 2:</strong> utm_source={platform_name} is pre-filled. <strong>Step 3:</strong> Enter your campaign name (e.g. spring-sale). <strong>Step 4:</strong> Optionally add utm_term and utm_content for A/B testing. <strong>Step 5:</strong> Copy your tracking URL and paste it into your ad platform.</p>'
+        use_cases = f'<h2>When to Use This {title}</h2>\n                <p>Use this builder when running {display_name} campaigns and you need consistent, error-free UTM parameters for Google Analytics. Perfect for tracking ad performance across multiple campaigns, ad sets, and creatives. {desc}</p>'
+        faq_items = [
+            {"q": f"How do I track {display_name} campaigns in Google Analytics?", "a": f"After generating your tracking URL here, use it as the destination URL in your ad. In Google Analytics, go to Acquisition &gt; Campaigns and filter by utm_source={platform_name} to see all traffic from {display_name}."},
+            {"q": f"What UTM parameters should I use for {display_name}?", "a": f"At minimum: utm_source={platform_name}, utm_medium={medium_name}, and utm_campaign=your-campaign-name. Add utm_term for keyword-level tracking and utm_content for A/B test variants."},
+            {"q": "Is TrackLinks free?", "a": "Yes — 100% free with no sign-up, no limits, no watermark. Generate as many tracking URLs as you need for all your campaigns."},
+        ]
+    else:
+        # guide / tool pages — extract a readable topic from title
+        raw = title.split(" —")[0].split(":")[0].split("|")[0].strip()
+        # Shorten common long patterns for natural reading
+        topic = raw.replace("What is ", "").replace("How to ", "").replace("Complete Guide", "").strip().rstrip("?")
+        if len(topic) > 50:
+            topic = raw[:50].rstrip() + "..."
+        what_is = f'<h2>{raw}</h2>\n                <p>{desc}</p>'
+        how_it_works = f'<h2>Why This Matters for Your Campaigns</h2>\n                <p>{desc} With TrackLinks, you can apply this right now — no spreadsheets, no manual URL building, no inconsistent naming across your team.</p>'
+        use_cases = f'<h2>Who Should Use This?</h2>\n                <p>Digital marketers, growth managers, agency owners, affiliate marketers — anyone running paid or organic campaigns who needs clean attribution data. {desc}</p>'
+        faq_q1 = topic if topic else "this tool"
+        faq_items = [
+            {"q": f"How does {faq_q1} work with TrackLinks?", "a": f"TrackLinks generates properly formatted UTM tracking URLs for you. Enter your landing page, fill in campaign details, and copy the ready-to-use tracking link. {desc}"},
+            {"q": "Do I need technical skills to use this?", "a": "No. TrackLinks handles the UTM parameter formatting automatically. Just enter your URL and campaign name — the tool builds the tracking link correctly every time."},
+            {"q": "Is TrackLinks compatible with Google Analytics 4?", "a": "Yes. All UTM parameters generated by TrackLinks are fully compatible with GA4, Universal Analytics, and most analytics platforms that support UTM tracking."},
+        ]
+    
+    faq_html = "\n                ".join(f'<p><strong>Q: {faq["q"]}</strong><br>A: {faq["a"]}</p>' for faq in faq_items)
+    faq_json = ",".join(f'{{"@type":"Question","name":"{faq["q"]}","acceptedAnswer":{{"@type":"Answer","text":"{faq["a"]}"}}}}' for faq in faq_items)
+    
+    return {"what_is": what_is, "how_it_works": how_it_works, "use_cases": use_cases, "faq_html": faq_html, "faq_json": faq_json}
+
+
 def build_page(s):
     title = s["title"]
     desc = s["desc"]
     slug = s["slug"]
     cat = s.get("cat", "scene")
     preset = s.get("preset", {})
+    content = make_content(s)
     
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -72,7 +129,7 @@ def build_page(s):
     {{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{title}","url":"https://{DOMAIN}/{slug}/","description":"{desc}","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
     </script>
     <script type="application/ld+json">
-    {{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{"@type":"Question","name":"What is a Campaign URL Builder?","acceptedAnswer":{{"@type":"Answer","text":"A tool that creates trackable marketing links by adding UTM parameters so you can measure campaign performance in Google Analytics."}}}},{{"@type":"Question","name":"Is TrackLinks free?","acceptedAnswer":{{"@type":"Answer","text":"Yes, completely free. No sign-up required."}}}},{{"@type":"Question","name":"What platforms does TrackLinks support?","acceptedAnswer":{{"@type":"Answer","text":"Google Ads, Facebook Ads, TikTok, Instagram, Email, and any platform using UTM parameters."}}}}]}}
+    {{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{content["faq_json"]}]}}
     </script>
     <script type="application/ld+json">
     {{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://{DOMAIN}/"}},{{"@type":"ListItem","position":2,"name":"{title}","item":"https://{DOMAIN}/{slug}/"}}]}}
@@ -111,29 +168,22 @@ def build_page(s):
                 </div>
             </div>
             <div class="content-section">
-                <h2>What is TrackLinks?</h2>
-                <p>TrackLinks is a free campaign URL builder that helps you create trackable marketing links with UTM parameters. Build links for Google Ads, Facebook Ads, TikTok campaigns, email marketing, and more — then measure performance in Google Analytics. Build your campaign links with TrackLinks for precise attribution tracking.</p>
-                <h2>How It Works</h2>
-                <p>Step 1: Enter your landing page URL. Step 2: Add your traffic source (e.g. google, facebook). Step 3: Choose your medium (cpc, email, social). Step 4: Name your campaign. Step 5: Copy and use the generated tracking link.</p>
-                <h2>Common Use Cases</h2>
-                <p>TrackLinks is used by marketers and advertisers for Google Ads tracking, Facebook campaign attribution, TikTok ad measurement, email campaign tracking, affiliate link management, and social media traffic analysis.</p>
+                {content["what_is"]}
+                {content["how_it_works"]}
+                {content["use_cases"]}
                 <h2>About This Tool</h2>
-                <p>{desc} Use TrackLinks to build campaign URLs with UTM parameters for precise marketing attribution.</p>
+                <p>{desc}</p>
             </div>
-            <div class="cross-link">
-                <strong>Pro Tip</strong> — Need to compress images for your campaigns? Try <a href="https://compressnow.net">CompressNow</a>. Resizing ad creatives? Use <a href="https://resizenow.net">ResizeNow</a>. Writing ad copy? <a href="https://messagegen-ai.com">MessageGen-AI</a> helps with email drafts.
-            </div>
+
             <div class="content-section" id="faq">
                 <h2>Frequently Asked Questions</h2>
-                <p><strong>Q: What are UTM parameters?</strong><br>A: UTM parameters are tags added to URLs that allow Google Analytics to track where your traffic comes from, which medium was used, and which campaign drove the visit.</p>
-                <p><strong>Q: Is TrackLinks free?</strong><br>A: Yes, completely free with no sign-up required. Build unlimited campaign URLs.</p>
-                <p><strong>Q: Can I use TrackLinks for Facebook Ads?</strong><br>A: Yes — just select Facebook Ads preset and TrackLinks fills the right UTM values.</p>
-                <p><strong>Q: How do I see the tracking data?</strong><br>A: After using your TrackLinks-generated URL in campaigns, check Google Analytics under Acquisition > Campaigns.</p>
+                {content["faq_html"]}
             </div>
         </div>
     </div>
     <footer>
         <p>TrackLinks — Free Campaign URL Builder. Build tracking links for Google Ads, Facebook, TikTok, email and more.</p>
+        <p style="margin-top:8px"><strong>Pro Tip</strong> — Need to compress images? Try <a href="https://compressnow.net">CompressNow</a>. Resizing ad creatives? Use <a href="https://resizenow.net">ResizeNow</a>. Writing ad copy? <a href="https://messagegen-ai.com">MessageGen-AI</a> helps.</p>
         <p style="margin-top:8px"><a href="/">Home</a> · <a href="https://compressnow.net">CompressNow</a> · <a href="https://resizenow.net">ResizeNow</a> · <a href="https://tonemodifier.com">ToneModifier</a></p>
     </footer>
     <script>
@@ -175,9 +225,10 @@ function setPreset(type){{
 # ═══ Page Definitions ═══════════════════════════════
 
 HOMEPAGE = {
-    "title": "Campaign URL Builder",
+    "title": "Free Campaign URL Builder — Create Tracking Links",
     "desc": "Build trackable marketing links with UTM parameters for Google Ads, Facebook, TikTok and email campaigns. Free, no sign-up.",
     "slug": "",
+    "cat": "platform",
 }
 
 PLATFORMS = [
