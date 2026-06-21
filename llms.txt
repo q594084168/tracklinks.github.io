@@ -1,0 +1,19 @@
+# TrackLinks — Free Campaign URL Builder
+# llms.txt — AI crawler content index
+
+## What We Do
+Build trackable marketing links with UTM parameters. Free, no sign-up. Dark dashboard design.
+
+## Key Differentiators
+- Pre-filled platform presets (Google Ads, Facebook, TikTok, email)
+- Dark dashboard UI (unique among UTM builders)
+- 100+ UTM-specific guide pages with educational content
+
+## Primary Content
+- Homepage: / — tool + platform presets
+- Platform pages: /utm/google-ads/, /utm/facebook-ads/, /utm/tiktok-ads/ — 45 platform-specific pages
+- Guides: /utm-best-practices.html, /utm-parameters-explained.html, /what-is-utm.html
+
+## FAQ
+Q: Free? A: Yes, 100% free, no signup, no limits.
+Q: What are UTM parameters? A: Tags added to URLs that tell Google Analytics where traffic comes from.
